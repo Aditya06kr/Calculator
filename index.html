@@ -3,66 +3,54 @@
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>replit</title>
+  <meta name="viewport" content="width=device-width">
+  <title>Calculator Made By Me</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
-  
+  <link href="utils.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  <h1>Use Me</h1>
-<div class= "formstyle">  
-<form name = "form1">  
-      
-    <!-- This input box shows the button pressed by the user in calculator. -->  
-  <input id = "calc" type ="text" name = "answer"> <br> <br>  
-  <!-- Display the calculator button on the screen. -->  
-  <!-- onclick() function display the number prsses by the user. -->  
-  <input type = "button" value = "1" onclick = "form1.answer.value += '1' ">  
-   <input type = "button" value = "2" onclick = "form1.answer.value += '2' ">  
-  <input type = "button" value = "3" onclick = "form1.answer.value += '3' ">   
-   <input type = "b" value = "+" onclick = "form1.answer.value += '+' ">  
-  <br> <br>  
-    
-  <input type = "button" value = "4" onclick = "form1.answer.value += '4' ">  
-   <input type = "button" value = "5" onclick = "form1.answer.value += '5' ">  
-  <input type = "button" value = "6" onclick = "form1.answer.value += '6' ">   
-  <input type = "b" value = "-" onclick = "form1.answer.value += '-' ">  
-  <br> <br>  
-    
-  <input type = "button" value = "7" onclick = "form1.answer.value += '7' ">  
-   <input type = "button" value = "8" onclick = "form1.answer.value += '8' ">  
-  <input type = "button" value = "9" onclick = "form1.answer.value += '9' ">   
-  <input type = "b" value = "*" onclick = "form1.answer.value += '*' ">  
-  <br> <br>  
-<!--    <input type = "b" value = "%" onclick = "form1.answer.value += '%' ">    -->
-   <!-- <input type="button" value="0" onclick="form1.answer.value+='0'">  -->
- 
-    
-    
-  <input type = "b" value = "/" onclick = "form1.answer.value += '/' ">  
-  <input type = "b" value = "0" onclick = "form1.answer.value += '0' ">  
-    <input type = "b" value = "." onclick = "form1.answer.value += '.' ">  
-  
-  <input type = "button" value = "="  id="value" onclick = "form1.answer.value = eval(form1.answer.value) ">   
-  <br>   
-   <!-- Display the Cancel button and erase all data entered by the user.    -->
-  <input type = "button" value = "Clear All" onclick = "form1.answer.value = ' ' " id= "clear" >   
-  <br>   
-    
-</form>  
-</div>  
-  <center><button id="but" onclick="Darkmode()">Dark Mode</button>
-  </center> 
- <!--
-  This script places a badge on your repl's full-browser view back to your repl's cover
-  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
-  teal, blue, blurple, magenta, pink!
-  -->
-  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
-  <script src="script.js"></script>
-</body>
+  <h1 class='text-center'>Use Me !!! </h1>
+  <div class="container  mx-auto flex flex-col items-center">
+    <div class="row">
+      <input class="input" type="text">
+    </div>
+    <div class="row">
+      <button class="button">C</button>
+      <button class="button">%</button>
+      <button class="button">M+</button>
+      <button class="button">←</button>
+    </div>
+    <div class="row">
+      <button class="button">7</button>
+      <button class="button">8</button>
+      <button class="button">9</button>
+      <button class="button">*</button>
+    </div>
+    <div class="row">
+      <button class="button">4</button>
+      <button class="button">5</button>
+      <button class="button">6</button>
+      <button class="button">/</button>
+    </div>
+    <div class="row">
+      <button class="button">1</button>
+      <button class="button">2</button>
+      <button class="button">3</button>
+      <button class="button">+</button>
+    </div>
+    <div class="row">
+      <button class="button">0</button>
+      <button class="button">.</button>
+      <button class="button">=</button>
+      <button class="button">-</button>
+    </div>
+  </div>
 
+  <script src="script.js"></script>
+
+  
+  
+</body>
 
 </html>

@@ -1,38 +1,26 @@
-// const op = prompt('Enter operator to perform the calculation ( either +, -, * or / ): ');  
-const op=document.getElementById("b")
-  
-// accept the number from the user through prompt box  
-// const n1 = parseFloat(prompt ('Enter the first number: '));  
-const n1=document.getElementById("button")
-// const n2 = parseFloat(prompt ('Enter the second number: '));  
-const n2=document.getElementById("button")
-let r;
-if(op=='+')
-{
-    r=n1+n2;
-}
-else if(op=='-')
-{
-    r=n1-n2;
-}
-else if(op=='*')
-{
-    r=n1*n2;
-}
-else if(op=='/')
-{
-    r=n1/n2;
-}
-else if(op=='%')
-{
-    r=n1%n2;
-}
-// window.alert("RESULT IS"+r);
+let audioTurn = new Audio("bing.mpeg")
+let string = "";
+let buttons = document.querySelectorAll('.button')
+Array.from(buttons).forEach((button) => {
+  button.addEventListener('click', (e) => {
+    audioTurn.play();
+    if (e.target.innerHTML == '=') {
+      string = eval(string);
+      document.querySelector('input').value = string
+    }
+    else if (e.target.innerHTML == 'C') {
+      string = "";
+      document.querySelector('input').value = string
+    }
+    else if (e.target.innerHTML == '←') {
+      string = string.slice(0, -1);
+      document.querySelector('input').value = string
+    }
+    else {
+      console.log(e.target);
+      string = string + e.target.innerHTML
+      document.querySelector('input').value = string;
+    }
 
- function Darkmode()
-   {
-    var c=document.getElementById("but")
-    var e=document.body
-     document.body.style.backgroundColor="#A020F0"
-     c.innerText="Dark mode is on"
-   }
+  })
+})
