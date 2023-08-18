@@ -53,3 +53,12 @@ input{
 #clear{
     margin: 2px;
 }
+
+.same:hover {
+    background-color: darkcyan;
+    color: white;
+}
+
+#clear:hover{
+    background-color: red;
+}
